@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(124, 177, 207, 0.795);
+}
+
+h1 {
+    text-align: center;
+}
+
+#recipe {
+    font-size: 14px;
+    font-weight: bold;
+    color: antiquewhite;
+    
+}
