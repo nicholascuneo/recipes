@@ -1,18 +1,126 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 219, 198);
+    font-family: 'Roboto Slab', Arial, sans-serif;
+    background-color: #eae2d0; /* Light cream */
+    color: #3e3e3e; /* Gray-brown */
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-div {
-    display: grid;
-    place-items: center;
-}
-
-#hasborder {
-    border: 2px solid #000;
-}
-
-.name,
-.subname {
+/* Header Styling */
+h1.name {
+    font-size: 2.5rem;
+    color: #5a4234; /* Dark brown */
     text-align: center;
+    margin-bottom: 10px;
+}
+
+h4.subname {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #7d5a4e; /* Soft brown */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Image Styling */
+img#hasborder {
+    border: 5px solid #967b68;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Section Headers */
+h3, h4 {
+    margin-bottom: 10px;
+    color: #5a4234; /* Same as main header */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Description Section */
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* List Styling */
+ul, ol {
+    margin: 0 0 20px 20px;
+    padding: 0;
+    list-style: none;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #7d5a4e;
+    font-size: 1.2rem;
+}
+
+ol li {
+    counter-increment: step-counter;
+}
+
+ol li::before {
+    content: counter(step-counter) '.';
+    position: absolute;
+    left: 0;
+    color: #5a4234; /* Warm brown for step numbers */
+    font-weight: bold;
+}
+
+/* Steps Section Styling */
+ol {
+    padding: 20px;
+    background: #f4f0e3; /* Light beige for rustic accent */
+    border: 1px solid #c7b8a6;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button-like Steps Styling */
+ol li em {
+    color: #6c8b74; /* Muted green for key points */
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Flexbox Container for Centering */
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Spacing Between Steps */
+ol li + br {
+    display: none;
 }
